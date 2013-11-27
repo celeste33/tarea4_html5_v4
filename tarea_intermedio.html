@@ -36,6 +36,19 @@
 
 		<script>
 			//NIVEL INTERMEDIO
+			$(function(){
+				 $("body").on("click", ".agregar", function(evento) {
+				 //CUERPO DE LA FUNCION
+				 	$("table").append("<tr><td contentEditable='true'>Juanito Perez</td><td contentEditable='true'>Montevideo Distrito Federal</td><td><img class='agregar' src='img/add.png'/><img class='remover' src='img/delete.png'/></td></tr>");
+				  });
+				  
+				  $("body").on("click",".remover",function(evento){
+				  	var tabla = $(evento.target);
+					tabla.parents("tr").remove();
+					
+				  });
+
+			});
 		</script>
 	</head>
 	<body>
